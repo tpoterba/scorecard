@@ -34,6 +34,7 @@
             <thead>
             <tr>
                 <th align="left">id</th>
+                <th align="left">author</th>
                 <th align="left">title</th>
             </tr>
             </thead>
@@ -41,6 +42,7 @@
             {% for pr in user_data['NEEDS_REVIEW'] %}
             <tr>
                 <td><a href="{{ pr.html_url }}">{{ pr.id }}</a></td>
+                <td><a href="https://github.com/{{ user }}">{{ pr.user }}</a></td>
                 <td>{{ pr.title }}</td>
             </tr>
             {% endfor %}
